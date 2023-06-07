@@ -30,10 +30,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Build TinaCMS
-        env:
-          TINA_PUBLIC_CLIENT_ID: ${{ secrets.TINA_PUBLIC_CLIENT_ID }}
-          TINA_TOKEN: ${{ secrets.TINA_TOKEN }}
         run: npx tinacms build
       - name: Checkout
         uses: actions/checkout@v3
@@ -87,6 +83,11 @@ jobs:
         uses: actions/upload-pages-artifact@v1
         with:
           path: ./out
+          
+      - name: Build TinaCMS
+        env:
+          TINA_PUBLIC_CLIENT_ID: ${{ secrets.TINA_PUBLIC_CLIENT_ID }}
+          TINA_TOKEN: ${{ secrets.TINA_TOKEN }}
 
   # Deployment job
   deploy:
