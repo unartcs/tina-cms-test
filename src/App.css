@@ -1,0 +1,42 @@
+.navbar-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 5rem;
+  background-color: gray;
+}
+
+.navbar-logo {
+  font-size: 36px;
+}
+
+.navbar-menu {
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar-menu > a {
+  color: blue;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.welcome-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5rem;
+  gap: 2rem;
+}
+
+.welcome-wrapper > h1 {
+  font-size: 36px;
+  color: red;
+}
+
+.welcome-wrapper > p {
+  font-size: 24px;
+  color: green;
+  text-align: center;
+}
