@@ -34,7 +34,7 @@ jobs:
         env:
           TINA_PUBLIC_CLIENT_ID: ${{ secrets.TINA_PUBLIC_CLIENT_ID }}
           TINA_TOKEN: ${{ secrets.TINA_TOKEN }}
-        run: npx tinacms build
+        run: yarn build
       - name: Checkout
         uses: actions/checkout@v3
       - name: Detect package manager
