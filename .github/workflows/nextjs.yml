@@ -30,12 +30,12 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Build TinaCMS
-        working-directory: ./
-        env:
-          TINA_PUBLIC_CLIENT_ID: ${{ secrets.TINA_PUBLIC_CLIENT_ID }}
-          TINA_TOKEN: ${{ secrets.TINA_TOKEN }}
-        run: yarn build
+     # - name: Build TinaCMS
+     #   working-directory: ./
+     #   env:
+     #     TINA_PUBLIC_CLIENT_ID: ${{ secrets.TINA_PUBLIC_CLIENT_ID }}
+     #     TINA_TOKEN: ${{ secrets.TINA_TOKEN }}
+     #   run: yarn build
       - name: Checkout
         uses: actions/checkout@v3
       - name: Detect package manager
